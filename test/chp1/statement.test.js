@@ -2,6 +2,10 @@ import { expect } from 'chai';
 import {statement} from '../../src/chp1/statement.js'
 import {htmlStatement} from "../../src/chp1/statement";
 
+// const  { expect } = require('chai');
+// const { statement } = require('../../src/chp1/statement.js')
+// const { htmlStatement} = require('../../src/chp1/statement')
+
 describe('statement', () => {
     let playsJson =
         {
@@ -39,6 +43,7 @@ describe('statement', () => {
         "Amount owed is $1,730.00\n" +
         "You earned 47 credits\n";
 
+        console.info("statment=" + statement(invoicesJson[0], playsJson) )
         expect(statement(invoicesJson[0], playsJson)).to.equal(expected);
     });
 
@@ -51,6 +56,7 @@ describe('statement', () => {
         result += "</table>\n";
         result += `<p>Amount owed is <em>$1,730.00</em></p>\n`;
         result += `<p>You earned <em>47</em> credits</p>\n`;
+
 
         expect(htmlStatement(invoicesJson[0], playsJson)).to.equal(result);
     });

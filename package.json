@@ -2,15 +2,22 @@
   "name": "mf-refactoring-2nd",
   "version": "1.0.0",
   "scripts": {
+    "start": "babel-node --presets es2015 ./src/chp1/baseApp.js",
     "test": "mocha --watch --recursive --require babel-core/register"
   },
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.26.0",
     "chai": "^4.2.0",
-    "eslint": "^5.12.1",
     "js-money": "^0.6.3",
-    "mocha": "^5.2.0",
     "sinon": "^7.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.12.1",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
   }
 }

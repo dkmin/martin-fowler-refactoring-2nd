@@ -6,7 +6,7 @@ class PerformanceCalculator {
         this.performance = aPerformance;
         this.play = aPlay;
     }
-    
+
     get amount() {
         throw new Error('subclass responsibility');
     }
