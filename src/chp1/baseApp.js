@@ -4,7 +4,7 @@ let plays =   {
     "othello": {"name": "Othello", "type": "tragedy"}
 };
 let invoices =
-    [
+
         {
             "customer": "BigCo",
             "performances": [
@@ -22,7 +22,7 @@ let invoices =
                 }
             ]
         }
-    ];
+
 
 function statement (invoice, play) {
     let totalAmount = 0;
@@ -31,7 +31,8 @@ function statement (invoice, play) {
     const format = new Intl.NumberFormat("en-US",
         { style: "currency", currency: "USD",
             minimumFractionDigits: 2 }).format;
-console.table(invoice.performances)
+
+    console.log(invoice.performances)
     for (let perf of invoice.performances) {
         const play = plays[perf.playID];
         let thisAmount = 0;
